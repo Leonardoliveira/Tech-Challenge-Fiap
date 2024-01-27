@@ -6,7 +6,8 @@ from PIL import Image
 
 
 #Leitura e tratamento
-df = pd.read_csv("df_forecast.csv", sep=",")
+url = "https://raw.githubusercontent.com/Leonardoliveira/Tech-Challenge-Fiap/main/df_forecast.csv"
+df = pd.read_csv(url, sep=",")
 df['Data'] = pd.to_datetime(df['Data'])
 df.set_index('Data', inplace=True)
 
